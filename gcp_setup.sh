@@ -3,6 +3,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/daria/Downloads/taxiworkflow-4cb511
 gcloud auth application-default login
 # Initialize state file (.tfstate)
 terraform init
+
 # Check changes to new infra plan
 terraform plan -var="project=taxiworkflow"
 

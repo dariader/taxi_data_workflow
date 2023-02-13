@@ -1,0 +1,1 @@
+wget -r -A "fhv/fhv_tripdata_2019-[0-9]{2}.csv.gz" https://github.com/DataTalksClub/nyc-tlc-data/releases/download/
