@@ -1,7 +1,7 @@
 locals {
   data_lake_bucket = "dtc_data_lake"
   project = "taxiworkflow"
-  ml_files_dir = "./working_with_ml/fhv/"
+  ml_files_dir = "./working_with_ml/fhv/fhv_parq/"
   gcs_bucket = "${local.data_lake_bucket}_${local.project}"
 }
 
