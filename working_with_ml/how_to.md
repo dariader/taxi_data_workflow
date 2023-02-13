@@ -5,9 +5,7 @@
 ```
 resource "google_storage_bucket_object" "default" {
   name    = "test_fhv_files"
-  # Uncomment and add valid path to an object.
   source = "./working_with_ml/fhv/test.csv.gz"
-  # content      = "Data as string to be uploaded"
   content_type = "text/plain"
   bucket       = "${local.data_lake_bucket}_${local.project}"
 }
@@ -23,12 +21,14 @@ gsutils config
 gcloud auth login
 gcloud config set project taxiworkflow
 ```
-set variables in `variables.tf`:
+
+Set variables in `variables.tf`:
+
 ```
 locals {
   data_lake_bucket = "dtc_data_lake"
   project = "taxiworkflow"
-  ml_files_dir = "./working_with_ml/fhv/"
+  ml_files_dir = "./working_with_ml/fhv/" # files to upload are here
   gcs_bucket = "${local.data_lake_bucket}_${local.project}"
 }
 ```
